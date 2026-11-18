@@ -2,8 +2,8 @@
 #                         AuraRTP Configuration Notes
 # ============================================================================== #
 # Config file updated for v1.0.0
-# Check for config file updates at ADD URL HERE WHEN CREATED
-# Report Bugs at ADD URL HERE WHEN CREATED
+# Check for config file updates at https://www.oneeyebear.net/artp-config
+# Report Bugs at https://github.com/oneeyebear90/AuraRTP/issues
 # Join the Aura Discord and Aura Minecraft Server at https://discord.gg/XmVXXzZ42u
 # ------------------------------------------------------------------------------ #
 # Aura RTP Settings
@@ -51,16 +51,26 @@ AuraRTP:
     overworld:
       WorldName: "world"
       Enabled: true
+      # Use Origin Coords as a starting point for distance calculation
+      Origin:
+        X: 0
+        Z: 0
       MinDist: 1000
       MaxDist: 29989000
     nether:
       WorldName: "world_nether"
       Enabled: true
+      Origin:
+        X: 0
+        Z: 0
       MinDist: 250
       MaxDist: 3748000
     end:
       WorldName: "world_the_end"
       Enabled: true
+      Origin:
+        X: 0
+        Z: 0
       MinDist: 500
       MaxDist: 29989000
 
