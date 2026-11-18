@@ -22,7 +22,7 @@ AuraRTP:
   PhysicalTriggers:
     Enabled: true
     Triggers:
-      - World: "world"
+      - World: "minecraft:overworld"
         TriggerObject: PALE_OAK_BUTTON
         X: 172
         Y: 65
@@ -47,9 +47,12 @@ AuraRTP:
       - WARM_OCEAN
 
   # Set information for any worlds/custom worlds here be sure to check world borders.
+  # In game use /worldborder get and divide the number by 2 then subtract 10k for
+  # a safe buffer for max distance in each world.
+  # Recommendation to divide nether coords by 8 afterward to allow for clean portal linking.
   Worlds:
     overworld:
-      WorldName: "world"
+      WorldName: "minecraft:overworld"
       Enabled: true
       # Use Origin Coords as a starting point for distance calculation
       Origin:
@@ -58,20 +61,20 @@ AuraRTP:
       MinDist: 1000
       MaxDist: 29989000
     nether:
-      WorldName: "world_nether"
+      WorldName: "minecraft:the_nether"
       Enabled: true
       Origin:
         X: 0
         Z: 0
-      MinDist: 250
-      MaxDist: 3748000
+      MinDist: 1000
+      MaxDist: 3748625
     end:
-      WorldName: "world_the_end"
+      WorldName: "minecraft:the_end"
       Enabled: true
       Origin:
         X: 0
         Z: 0
-      MinDist: 500
+      MinDist: 1000
       MaxDist: 29989000
 
   QueueSettings:
