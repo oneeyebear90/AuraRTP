@@ -1,3 +1,8 @@
+Download Aura Server QoL Plugin from these trusted hosts!
+
+[![Modrinth Version](https://img.shields.io/modrinth/v/aurartp?style=flat-square&logo=modrinth&label=Modrinth)](https://modrinth.com/plugin/aurartp) [![Hangar](https://img.shields.io/badge/Hangar-Aurartp-blue?style=flat-square&logo=paperMC&logoColor=white)](https://hangar.papermc.io/oneeyebear/Aurartp)
+
+
 # <center>AuraRTP</center>
 <br>
 
