@@ -1,0 +1,100 @@
+# ============================================================================== #
+#                         AuraRTP Configuration Notes
+# ============================================================================== #
+# Config file updated for v1.0.0
+# Check for config file updates at ADD URL HERE WHEN CREATED
+# Report Bugs at ADD URL HERE WHEN CREATED
+# Join the Aura Discord and Aura Minecraft Server at https://discord.gg/XmVXXzZ42u
+# ------------------------------------------------------------------------------ #
+# Aura RTP Settings
+# ------------------------------------------------------------------------------ #
+AuraRTP:
+  Enabled: true
+  # Enable/ Disable economy cost to teleport
+  UseEconomy: false
+  EconomyCost: 0
+  # Enable / Disable xp level cost to teleport
+  UseExpLevels: false
+  ExpLevelsCost: 0
+  # Set message on successful teleport - Supports &color codes
+  TpMessage: '&6[AuraRTP] &cNo turning back now. &7Welcome to the wild.'
+  # Enable/Disable physical triggers for teleport - add to triggers list for multiple
+  PhysicalTriggers:
+    Enabled: true
+    Triggers:
+      - World: "world"
+        TriggerObject: PALE_OAK_BUTTON
+        X: 172
+        Y: 65
+        Z: 115
+
+  RTPSettings:
+    EmbargoEnabled: true
+    # Time in seconds players will be locked out of teleport commands
+    EmbargoDuration: 600
+    # Time in seconds a player must wait to trigger RTP again. Embargo takes priority.
+    TriggerCooldown: 120
+    # Biomes listed here will be excluded as a valid location
+    BiomeBlacklist:
+      - DEEP_OCEAN
+      - OCEAN
+      - COLD_OCEAN
+      - DEEP_COLD_OCEAN
+      - FROZEN_OCEAN
+      - DEEP_FROZEN_OCEAN
+      - LUKEWARM_OCEAN
+      - DEEP_LUKEWARM_OCEAN
+      - WARM_OCEAN
+
+  # Set information for any worlds/custom worlds here be sure to check world borders.
+  Worlds:
+    overworld:
+      WorldName: "world"
+      Enabled: true
+      MinDist: 1000
+      MaxDist: 29989000
+    nether:
+      WorldName: "world_nether"
+      Enabled: true
+      MinDist: 250
+      MaxDist: 3748000
+    end:
+      WorldName: "world_the_end"
+      Enabled: true
+      MinDist: 500
+      MaxDist: 29989000
+
+  QueueSettings:
+    # Number of locations to generate and save in each world queue
+    MaxQueue: 30
+    # Number of teleports remaining before refill will trigger
+    RefillThreshold: 20
+    # Number of teleports remaining before refill triggers with trigger lock
+    EmergencyThreshold: 3
+    # Number of chunks pre-generated around each rtp target
+    ChunkGenRadius: 3
+    # Wait time in seconds before unloading chunks during generation
+    SettleDelay: 10
+    # Delay in seconds after a teleport before checking if refill needs to run
+    TpBufferDelay: 60
+  # Commands not allowed during embargo
+  EmbargoBlacklist:
+    - home
+    - homes
+    - spawn
+    - back
+    - ehome
+    - espawn
+    - eback
+    - tpa
+    - tpaccept
+    - etpa
+    - etpaccept
+    - tpask
+    - etpask
+  # Commands allowed during embargo (similar names to blacklist)
+  EmbargoExcluded:
+    - tpahere
+    - etpahere
+
+CheckForUpdates: true
