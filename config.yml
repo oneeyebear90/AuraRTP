@@ -22,7 +22,7 @@ AuraRTP:
   PhysicalTriggers:
     Enabled: true
     Triggers:
-      - World: "minecraft:overworld"
+      - World: "world"
         TriggerObject: PALE_OAK_BUTTON
         X: 172
         Y: 65
@@ -52,7 +52,7 @@ AuraRTP:
   # Recommendation to divide nether coords by 8 afterward to allow for clean portal linking.
   Worlds:
     overworld:
-      WorldName: "minecraft:overworld"
+      WorldName: "world"
       Enabled: true
       # Use Origin Coords as a starting point for distance calculation
       Origin:
@@ -61,7 +61,7 @@ AuraRTP:
       MinDist: 1000
       MaxDist: 29989000
     nether:
-      WorldName: "minecraft:the_nether"
+      WorldName: "world_nether"
       Enabled: true
       Origin:
         X: 0
@@ -69,7 +69,7 @@ AuraRTP:
       MinDist: 1000
       MaxDist: 3748625
     end:
-      WorldName: "minecraft:the_end"
+      WorldName: "world_the_end"
       Enabled: true
       Origin:
         X: 0
@@ -79,11 +79,11 @@ AuraRTP:
 
   QueueSettings:
     # Number of locations to generate and save in each world queue
-    MaxQueue: 30
+    MaxQueue: 10
     # Number of teleports remaining before refill will trigger
-    RefillThreshold: 20
+    RefillThreshold: 5
     # Number of teleports remaining before refill triggers with trigger lock
-    EmergencyThreshold: 3
+    EmergencyThreshold: 2
     # Number of chunks pre-generated around each rtp target
     ChunkGenRadius: 3
     # Wait time in seconds before unloading chunks during generation
