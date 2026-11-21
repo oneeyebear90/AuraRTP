@@ -1,7 +1,7 @@
 # ============================================================================== #
 #                         AuraRTP Configuration Notes
 # ============================================================================== #
-# Config file updated for v1.0.0
+# Config file updated for v1.0.1
 # Check for config file updates at https://www.oneeyebear.net/artp-config
 # Report Bugs at https://github.com/oneeyebear90/AuraRTP/issues
 # Join the Aura Discord and Aura Minecraft Server at https://discord.gg/XmVXXzZ42u
@@ -18,11 +18,13 @@ AuraRTP:
   ExpLevelsCost: 0
   # Set message on successful teleport - Supports &color codes
   TpMessage: '&6[AuraRTP] &cNo turning back now. &7Welcome to the wild.'
-  # Enable/Disable physical triggers for teleport - add to triggers list for multiple
+  # Enable/Disable physical triggers for teleport - add to Triggers list for multiple triggers
+  # TeleportTo accepts [any] or a list of WorldNames (e.g., [world], [world_nether, world_the_end])
   PhysicalTriggers:
     Enabled: true
     Triggers:
       - World: "world"
+        TeleportTo: [any]
         TriggerObject: PALE_OAK_BUTTON
         X: 172
         Y: 65
@@ -79,11 +81,11 @@ AuraRTP:
 
   QueueSettings:
     # Number of locations to generate and save in each world queue
-    MaxQueue: 10
+    MaxQueue: 15
     # Number of teleports remaining before refill will trigger
-    RefillThreshold: 5
+    RefillThreshold: 8
     # Number of teleports remaining before refill triggers with trigger lock
-    EmergencyThreshold: 2
+    EmergencyThreshold: 3
     # Number of chunks pre-generated around each rtp target
     ChunkGenRadius: 3
     # Wait time in seconds before unloading chunks during generation
